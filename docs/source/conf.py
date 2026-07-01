@@ -24,6 +24,7 @@ extensions = [
 myst_enable_extensions = [
     "dollarmath",
     "amsmath",
+    "html_image",
 ]
 
 # Render Jupyter notebooks as documentation pages without executing them.
