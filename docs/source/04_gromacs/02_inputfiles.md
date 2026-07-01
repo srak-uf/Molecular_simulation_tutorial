@@ -1,17 +1,20 @@
 # Input Files
 ## Overview
-> [!NOTE]
-> This note includes only knowhow to perfom molecular dynamics by GROMACS. You should read the [GROMACS manual](https://manual.gromacs.org/) carefully and understand the mean of parameters.  
+```{note}
+This note includes only knowhow to perfom molecular dynamics by GROMACS. You should read the [GROMACS manual](https://manual.gromacs.org/) carefully and understand the mean of parameters.  
+```
 
 There are three key input files needed to run a GROMACS calculation:  
-1. `.mdp`: Molecular Dynamics Parameter  (ex. timestep, temperature, and so on)  
+1. `.mdp`: Molecular Dynamics Parameter  (ex. timestep, temperature, and so on) 
+   - [Official manual](https://manual.gromacs.org/current/user-guide/mdp-options.html)
 2. `.top`: System topology (force field assignment)
+   - [Official manual](https://manual.gromacs.org/current/reference-manual/topologies/topology-file-formats.html)
 3. `.gro`: Structure file
+   - [Official manual](https://manual.gromacs.org/current/reference-manual/file-formats.html#gro)
 
-Generate the binary file `.tpr` to run a MD by converting the above files. 
-1. `.tpr`: system topology, parameters, coordinates and velocities
+Generate the binary file `.tpr` to run a MD by converting the above files.   
+`.tpr` has infomation about system topology, parameters, coordinates and velocities
 
-## [mdp](https://manual.gromacs.org/current/user-guide/mdp-options.html) 
 ### Energy minimization
 - <details>
     <summary>mdp example</summary>
@@ -124,16 +127,17 @@ Generate the binary file `.tpr` to run a MD by converting the above files.
 
 ### NpT ensemble
 #### Liquid system
-- NpT of amorphous system are usually perfomred by **isotropic** NpT.
-- If the system is unstable or fails the NpT calculation, the below procedures will be helpful. 
+- *NpT* of amorphous system are usually perfomred by **isotropic** *NpT*.
+- If the system is unstable or fails the *NpT* calculation, the below procedures will be helpful. 
     - Decrease temperature
     - Use Berendsen thermostat and barostat
     - Decrease dt  
-- NpT calculations are mainly used to get the equilibrium density (volume) for following NVT production run.
-    > [!TIP]
-    > You can get the equilibrium cell length by gmx energy command.  
-    > The final structure should be scaled to make the cell lenggth the equilibrated one. 
-    > gmx editconf with -scale option and ASE are useful. 
+- *NpT* calculations are mainly used to get the equilibrium density (volume) for following *NVT* production run.
+    ```{tip}
+    You can get the equilibrium cell length by gmx energy command.  
+    The final structure should be scaled to make the cell lenggth the equilibrated one. 
+    gmx editconf with -scale option and ASE are useful. 
+    ```
 - <details>
     <summary>mdp example</summary>
 
@@ -194,7 +198,7 @@ Generate the binary file `.tpr` to run a MD by converting the above files.
 </details>
 
 #### Crystal system
-- Anisotropic (Box changes along x, y, z direction independently) or triclinic (Box changes along x, y, z, xy, yz, zx direction independently) NpT are used for crystal system.
+- Anisotropic (Box changes along x, y, z direction independently) or triclinic (Box changes along x, y, z, xy, yz, zx direction independently) *NpT* are used for crystal system.
 - <details>
     <summary>mdp example for anisotropic NpT</summary>
 

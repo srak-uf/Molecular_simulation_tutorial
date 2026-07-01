@@ -4,4 +4,5 @@
 :maxdepth: 2
 
 01_installation_gromacs.md
+02_inputfiles.md
 ```
