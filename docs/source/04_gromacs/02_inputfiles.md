@@ -15,11 +15,10 @@ There are three key input files needed to run a GROMACS calculation:
 Generate the binary file `.tpr` to run a MD by converting the above files.   
 `.tpr` has infomation about system topology, parameters, coordinates and velocities
 
-### Energy minimization
+## Energy minimization
 - <details>
     <summary>mdp example</summary>
 
-    ###
     ```
     integrator              = steep  ; steep | md | md-vv
     nsteps                  = 4096
@@ -58,7 +57,7 @@ Generate the binary file `.tpr` to run a MD by converting the above files.
     ```
 </details>
 
-### NVT ensemble
+## NVT ensemble
 - Nose-Hoover thermostat is used to control temperature
 - If the system is unstable or fails the NVT calculation, the below procedures will be helpful. 
     - Decrease temperature
@@ -67,8 +66,7 @@ Generate the binary file `.tpr` to run a MD by converting the above files.
 - <details>
     <summary>mdp example</summary>
 
-    ###
-    ```
+        ```
     gen-vel                 = yes
     gen-seed                = 12345
     gen-temp                = 300
@@ -125,8 +123,8 @@ Generate the binary file `.tpr` to run a MD by converting the above files.
 </details>
 
 
-### NpT ensemble
-#### Liquid system
+## NpT ensemble
+### Liquid system
 - *NpT* of amorphous system are usually perfomred by **isotropic** *NpT*.
 - If the system is unstable or fails the *NpT* calculation, the below procedures will be helpful. 
     - Decrease temperature
@@ -197,7 +195,7 @@ Generate the binary file `.tpr` to run a MD by converting the above files.
     ```
 </details>
 
-#### Crystal system
+### Crystal system
 - Anisotropic (Box changes along x, y, z direction independently) or triclinic (Box changes along x, y, z, xy, yz, zx direction independently) *NpT* are used for crystal system.
 - <details>
     <summary>mdp example for anisotropic NpT</summary>
