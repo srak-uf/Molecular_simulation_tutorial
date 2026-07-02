@@ -29,15 +29,15 @@
     インストールしたcondaが起動されて、Terminal上に(base)が表示されているかチェック。  
     （baseが表示されていなかったらTerminal開き直す）
     配布されたmd_***.ymlがあるディレクトリで以下のコマンドを実行。
-    - Intel Mac user
+    - Intel Mac user : {download}`md_intelmac.yml <files/md_intelmac.yml>`
         ```
         mamba env create -f md_intelmac.yml
         ```
-    - Arm Mac user
+    - Arm Mac user : {download}`md_osxarm64.yml <files/md_osxarm64.yml>`
         ```
         mamba env create -f md_osxarm64.yml
         ```
-    - Linux or WSL user
+    - Linux or WSL user : {download}`md_linux.yml <files/md_linux.yml>`
         ```
         mamba env create -f md_linux.yml
         ```
@@ -50,9 +50,9 @@
     ```
 
 4. 動作確認
-   配布されたview.py（toolsディレクトリ）とArgon.xyz（structuresディレクトリ）を同じディレクトリに入れて以下を実行。  
+   view.py（{download}`view.py <files/view.py>`）とArgon.xyz（{download}`Argon.xyz <files/Argon.xyz>`）を同じディレクトリに入れて以下を実行。  
    ASEライブラリの分子構造描画が立ち上がることを確認。  
-   Linux操作になれてなくてこのやり方が分からない人は02_Linuxで確認。  
+   Linux操作になれてなくてこのやり方が分からない人は[Linux tutorial](../02_linux/02_linux.md)で確認。  
    ```
    python3 view.py -pos Argon.xyz
    ```
