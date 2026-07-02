@@ -7,5 +7,5 @@
 02_inputfiles_gromacs.md
 03_forcefield_gromacs.md
 04_run_md_gromacs.md
-05_tutorial_gromacs.md
+05_hands_on_gromacs.md
 ```
