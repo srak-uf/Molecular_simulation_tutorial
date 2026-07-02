@@ -15,4 +15,5 @@
    02_linux/02_linux
    03_ase/index
    04_gromacs/index
+   05_gaussian/index
 
