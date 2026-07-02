@@ -46,7 +46,7 @@
     - TerminalにUser名の横に`~`と表示されている。
       - `~`: ホームディレクトリ = 今回pwdで示された階層
 3. 解析コード`view.py`と`aseconvert.py`を入れるanalysisフォルダを作る
-   - ダウンロード: {download}`view.py <codes/view.py>`, {download}`aseconvert.py <codes/aseconvert.py>`
+   - ダウンロード: {download}`view.py <files/view.py>`, {download}`aseconvert.py <files/aseconvert.py>`
     ```
     mkdir analysis
     ```
@@ -170,22 +170,23 @@
         毎回PATHを指定するのは面倒なので、自動で~/analysisディレクトリがPATHに追加されるようにする  
         1. Terminalのシェル言語がbashのときは~/.bashrc, zshのときは~/.zshrcがTerminal起動時に読み込まれる。  
            ここに上記で行った`export PATH=$PATH:[type full path of analysis directory]`を追記する。
-        2. Terminalを再起動して、`view.py -h`が使えるかチェック
+        2. Terminalを再起動して、別のディレクトリで`view.py -h`が使えるかチェック
 
 ### 実行チェック
-- 02_Linux演習/practiceでTerminalを起動（Finderの下に表示されているPath Barからスクリプトが入っているフォルダを右クリック→ New Terminal at Folderが楽）し、view.pyを以下のように実行。 
+- argon.xyzをダウンロード: {download}`argon.xyz <files/argon.xyz>`
+- argon.xyzをダウンロードしたディレクトリでTerminalを起動（Mac: Finderの下に表示されているPath Barからスクリプトが入っているフォルダを右クリック→ New Terminal at Folderが楽、Windows: Explorer上で`shift` + `右クリック`からLinuxで起動する or Terminalで起動する的なものがあるはずなのでそれを選択　が楽）し、view.pyを以下のように実行。 
   ```
   view.py -pos argon.xyz
   ```
   - -pos の後ろに開きたいファイルを指定する。（これはview.py -hでHelpを表示すれば書いてある）  
-- 02_Linux演習ディレクトリのaseconvert.pyについても同様に設定する。  
-  計算化学の構造ファイルをASEを用いて変換するツール。  
+- aseconvert.pyについても同様に設定する。  
+  このスクリプト計算化学の構造ファイルのフォーマットをASEを用いて変換するツール。  
   ```
   # example
   aseconvert.py -pos argon.xyz -o argon.cif
   ```  
-  のようにxyzファイル &rarr; cifファイルを変換できる。VASP用のPOSCARなどなども対応。
-## おまけTips
+  のようにxyzファイル &rarr; cifファイルを変換できる。pdb、VASP用のPOSCARなどなども対応。
+## Supplementary Tips
 - 長いコマンドを省略したいとき &rarr; `alias`
 - OSごとにテキストファイルの改行の取り扱いが異なる。
   - Windowsで編集したファイルがWindows仕様の改行コードになっているとLinuxで使えない場合がある。

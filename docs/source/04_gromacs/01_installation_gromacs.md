@@ -1,4 +1,14 @@
 # Installation
+## Local PC
+You can easily install GROMACS by using conda.  
+```{note}
+If you have already created conda environment at [Python installation](../01_programming/02_python.md), you don't need to install GROMACS because GROMACS is already included in the conda environment (name: md).
+```
+For installation, please run the following command in your terminal at the conda environment:
+```bash
+conda install -c conda-forge gromacs
+```
+
 ## TSUBAME
 1. Choose your own install directory and set `INSTALL_PREFIX` accordingly.  
    For example, if you want to install GROMACS under `/hoge/fuga`, run:
