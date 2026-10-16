@@ -50,11 +50,11 @@
     ```
 
 4. 動作確認
-   view.py（{download}`view.py <files/view.py>`）とArgon.xyz（{download}`Argon.xyz <files/Argon.xyz>`）を同じディレクトリに入れて以下を実行。  
+   view.py（{download}`view.py <files/view.py>`）とargon.xyz（{download}`argon.xyz <files/argon.xyz>`）を同じディレクトリに入れて以下を実行。  
    ASEライブラリの分子構造描画が立ち上がることを確認。  
    Linux操作になれてなくてこのやり方が分からない人は[Linux tutorial](../02_linux/02_linux.md)で確認。  
    ```
-   python3 view.py -pos Argon.xyz
+   python3 view.py -pos argon.xyz
    ```
 
 5. 補足・注意事項
